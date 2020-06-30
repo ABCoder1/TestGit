@@ -32,3 +32,19 @@ a:hover{
 a:active{
 	color: blue;
 }
+
+ul.a{
+	list-style-type: georgian;
+}
+
+ul.b{
+	list-style-type: square;
+}
+
+ul.c{
+	list-style-type: lao;
+}
+
+ul.d{
+	list-style-type: cambodian;
+}
