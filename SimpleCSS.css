@@ -35,16 +35,32 @@ a:active{
 
 ul.a{
 	list-style-type: georgian;
+
+	background: #ffe5e5;
+    padding: 5px;
+  	margin-left: 35px;
 }
 
 ul.b{
 	list-style-type: square;
+
+	background: #ffe5e5;
+    padding: 5px;
+  	margin-left: 35px;
 }
 
 ul.c{
 	list-style-type: lao;
+
+	background: #ffe5e5;
+    padding: 5px;
+  	margin-left: 35px;
 }
 
 ul.d{
 	list-style-type: cambodian;
+
+	background: #ffe5e5;
+    padding: 5px;
+  	margin-left: 35px;
 }
