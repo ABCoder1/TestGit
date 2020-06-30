@@ -16,3 +16,19 @@ table, th, tr {
   border-collapse: collapse;
 
 }
+
+a:link{
+	color : red;
+}
+
+a:visited{
+	color: green;
+}
+
+a:hover{
+	color: hotpink;
+}
+
+a:active{
+	color: blue;
+}

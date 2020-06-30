@@ -1,0 +1,18 @@
+body{
+	background-color: #ff9999;
+}
+
+/*.butn:link{
+	color: red;
+}
+.butn:visited{
+	color: green;
+}
+*/
+.butn:hover{
+	color: hotpink;
+}
+
+.butn:active{
+	color: blue;
+}
