@@ -1,0 +1,11 @@
+.Div1{
+	width: 252px;
+  	margin: auto;
+  	border: 5px solid red;
+}
+
+.Div2 {
+  			border: 5px outset pink;
+  			background-color: lightyellow;
+  			text-align: center;
+		}
