@@ -78,3 +78,7 @@ ul.d{
 
   	background-color: hotpink;	
 }
+
+tr[class]{
+	background-color: yellow;
+}
