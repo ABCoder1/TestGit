@@ -82,3 +82,7 @@ ul.d{
 tr[class]{
 	background-color: yellow;
 }
+
+p.hid{
+	display: none;
+}
