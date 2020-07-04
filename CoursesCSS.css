@@ -74,7 +74,7 @@ ul.d{
 	padding-top: 50px;
   	padding-right: 50px;
   	padding-bottom: 50px;
-  	padding-left: 50px;
+  	padding-left: 150px;
 
   	background-color: hotpink;	
 }
@@ -85,4 +85,10 @@ tr[class]{
 
 p.hid{
 	display: none;
+}
+
+img{
+	height: 138px;
+	width: 138px;
+	position: absolute;
 }
