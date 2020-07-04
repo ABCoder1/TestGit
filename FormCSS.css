@@ -1,14 +1,7 @@
 body{
-	background-color: #ff9999;
+	background-color: #e6ffff;
 }
 
-/*.butn:link{
-	color: red;
-}
-.butn:visited{
-	color: green;
-}
-*/
 .butn:hover{
 	color: hotpink;
 }
@@ -16,3 +9,13 @@ body{
 .butn:active{
 	color: blue;
 }
+
+img{
+	position: absolute;
+	width: 1600px;
+	height: 100px;
+	z-index: -1;
+	top: 0;
+	left: 0;
+
+} 
