@@ -92,3 +92,11 @@ img{
 	width: 138px;
 	position: absolute;
 }
+
+th.cour{
+	text-align: left;
+}
+
+th.gp{
+	text-align: right;
+}
