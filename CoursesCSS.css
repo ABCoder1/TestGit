@@ -100,3 +100,7 @@ th.cour{
 th.gp{
 	text-align: right;
 }
+
+tr:nth-child(odd){
+	background-color: #f2f2f2;
+}
