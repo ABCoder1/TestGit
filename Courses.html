@@ -59,6 +59,7 @@
 
 		<p> Here is my last semester's marksheet : </p>
 		<table class="tab">
+
 			<tr class="ab">
 				<th>Courses</th>
 				<th>Grade Point</th>
@@ -84,7 +85,22 @@
 				<th class="gp">9.80</th>
 			</tr>
 
+			<tr>
+				<th class="cour">Total : </th>
+				<th class="gp" id="tot"></th>
+			</tr>
+
+			<tr>
+				<th class="cour">Average : </th>
+				<th class="gp" id="avg"></th>
+			</tr>
+
 		</table>
+
+		<script>
+			document.getElementById("tot").innerHTML = (8.64+8.10+7.62+9+9.8) ;
+			document.getElementById("avg").innerHTML = (8.64+8.10+7.62+9+9.8)/5 ; 
+		</script>
 
 </body>
 </html>
