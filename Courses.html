@@ -98,8 +98,17 @@
 		</table>
 
 		<script>
-			document.getElementById("tot").innerHTML = (8.64+8.10+7.62+9+9.8) ;
-			document.getElementById("avg").innerHTML = (8.64+8.10+7.62+9+9.8)/5 ; 
+
+			function average(a, b, c, d, e){
+				return (a+b+c+d+e)/5 ;
+			}
+
+			function sum(a, b, c, d, e){
+				return (a+b+c+d+e);
+			}		
+
+			document.getElementById("tot").innerHTML = sum(8.64,8.10,7.62,9,9.8) ;
+			document.getElementById("avg").innerHTML = average(8.64,8.10,7.62,9,9.8) ; 
 		</script>
 
 </body>
