@@ -7,6 +7,7 @@
 			background-color: lightblue;
 		}
 	</style>
+	<script type="text/javascript"></script>
 <body>
 	<h1>Java Script</h1>
 	<p>JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. </p>
@@ -21,8 +22,28 @@
 
 	<p><b>Functions</b> are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code.</p>
 
+	<p> A <b>regular expression</b> is an object that describes a pattern of characters.
+
+	Regular expressions are used to perform <b> pattern-matching </b> and <b> "search-and-replace" </b> functions on text.</p>
+
 	<br><br>
 	<script>
+
+		function average(a, b, c, d, e){
+			return (a+b+c+d+e)/5 ;
+		}
+
+		function sum(a, b, c, d, e){
+			return (a+b+c+d+e);
+		}
+
+		function myfunc(){
+			var str = "JavaScript asad" ;
+			var pattern = "/JavaScript asad/i" ;
+			var result = str.match(pattern) ;  
+			console.log("result : ", result) ; 
+		}
+
 		var a=5;
 		var b=15;
 		console.log(a);
@@ -33,6 +54,23 @@
 		var ele = arr[3].toString();
 
 		console.log(ele);
+
+		myfunc();
+
+		var d = 16 ;
+
+		console.log("Square of (d=16) is :",Math.pow(d,2)) ; 
+		console.log("Square root of d :",Math.sqrt(d)) ;
+		console.log("Absolute value of -99.95 :",Math.abs(-99.95));
+
+		var ran = (Math.random())*10 ;
+		console.log("random number : ",ran) ; 
+		console.log("It's ceil :",Math.ceil(ran)) ;
+		console.log("It's rounded value :",Math.round(ran)) ;
+		console.log("It's floored value :",Math.floor(ran)) ; 
+
+		console.log("The value of tan(45) is : ",Math.tan(45 * Math.PI/180)) ;
+
 	</script>
 </body>
 </html>
