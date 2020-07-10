@@ -4,9 +4,16 @@
 	<title>Courses Registeration</title>
 
 	<link rel="stylesheet" type="text/css" href="FormCSS.css">
+
+	<script src="scripts/main.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
+
 	<center>
+
 		<div>
 			<img src="https://www.appmachine.com/wp-content/uploads/2016/02/No-Branding-Header-Background-1.jpg">
 			<h1><u> Courses Registeration </u></h1>
@@ -14,13 +21,14 @@
 		</div>
 	
 	<br><br><br>		
-	<form method="get">
+	<form method="get" name="myForm" onsubmit="return validateForm()">
+
 					<label for="Name">Name : </label>
 					<input type="text" name="fname" id="Name">
 					<br>
 
 					<label for="PhoneNo">Phone Number : </label>
-					<input type="Number" name="PhoneNo" id="PhoneNo">
+					<input type="Number" name="PhoneNo">
 					<br><br>
 
 					<label for="choice">Choice of Courses : </label> <br>
@@ -37,36 +45,42 @@
 
 					<p>Please select the courses you're interested in : </p>
 
+					<div class="checkbox-group required">
+
 					<label for="course1">Discrete Structures</label>
-					<input type="checkbox" name="course1" id="course1">
+					<input type="checkbox" id="course1" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course2">Basics of Management for Engg.</label>
-					<input type="checkbox" name="course2" id="course2">
+					<input type="checkbox" id="course2" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course3">Design and Analysis of Algorithm</label>
-					<input type="checkbox" name="course3" id="course3">
+					<input type="checkbox" id="course3" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course4">Relational Database Management System</label>
-					<input type="checkbox" name="course4" id="course4">
+					<input type="checkbox" id="course4" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course5">Computer Organisation and Architecture</label>
-					<input type="checkbox" name="course5" id="course5">
+					<input type="checkbox" id="course5" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course6">Communication Skill - IV</label>
-					<input type="checkbox" name="course6" id="course6">
+					<input type="checkbox" id="course6" name="checkbox_name[]">
 					<br><br>
 
 					<label for="course7">Energy Conversion Devices</label>
-					<input type="checkbox" name="course7" id="course7">
+					<input type="checkbox" id="course7" name="checkbox_name[]">
 					<br><br>
 
-					<input type="submit" class="butn">
+					</div>
+
+					<button class="butn" onsubmit="PhoneNo()">Submit</button>
+
 					<input type="submit" formtarget="_blank" value="Submit in a new tab" class="butn">
+				
 				</form>
 	</center>			
 
