@@ -27,6 +27,14 @@
 	Regular expressions are used to perform <b> pattern-matching </b> and <b> "search-and-replace" </b> functions on text.</p>
 
 	<br><br>
+
+	<p>Please enter today's date : <input type="date" id="dateinp"  value="2000-01-01">   <!-- <input type="submit" id="submitbutn"> --> <button onclick="DisplayDate()">Submit</button>
+	</p>
+
+	<p>According to you today's date is:  </p>
+	<p id="outdate"></p>
+
+	<br><br>
 	<script>
 
 		function average(a, b, c, d, e){
@@ -70,6 +78,20 @@
 		console.log("It's floored value :",Math.floor(ran)) ; 
 
 		console.log("The value of tan(45) is : ",Math.tan(45 * Math.PI/180)) ;
+
+		// var dt;
+		// document.getElementById("dateinp").value
+
+		// console.log("today's date is : ", dt);
+		document.getElementById("submitbutn").onclick = DisplayDate() ;
+
+		function DisplayDate(){
+			var dt = document.getElementById("dateinp").value ;
+
+			console.log("today's date is : ", dt) ;
+
+			document.getElementById("outdate").innerHTML = dt;
+		}
 
 	</script>
 </body>

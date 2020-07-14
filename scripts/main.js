@@ -2,6 +2,8 @@ console.log("hello there ")
 		
 function validateForm(){
 
+	var dt;
+
 	var x = document.forms["myForm"]["fname"].value ;	
 
 	if(x == ""){
@@ -31,3 +33,10 @@ function validateForm(){
 	
 	}
 }
+
+// document.getElementById("submitbutn").onclick = DisplayDate() ;
+
+// function DisplayDate(){
+// 	var dt = document.getElementById("dateinp").value ;
+// 	console.log("today's date is : ", dt) ;
+// }
