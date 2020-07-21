@@ -8,9 +8,20 @@
 		}
 	</style>
 	<script type="text/javascript"></script>
-<body>
+</head>
+	
+<body onload="loadingText()">
+
 	<h1>Java Script</h1>
-	<p>JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. </p>
+
+	<p>Welcome to this site,<br><br> 
+		What's your name : <input type="text" id="name">
+		<button onclick="username()">Confirm</button>
+	</p>
+
+	<p id="welcometxt"></p>
+
+	<p id="para1">JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. </p>
 
 	<p><b>Variables</b> are containers that store values.</p>
 
@@ -26,15 +37,40 @@
 
 	Regular expressions are used to perform <b> pattern-matching </b> and <b> "search-and-replace" </b> functions on text.</p>
 
-	<br><br>
+	<p> For javascript application use <b>button-tag</b> instead of input-tag</p>
 
-	<p>Please enter today's date : <input type="date" id="dateinp"  value="2000-01-01">   <!-- <input type="submit" id="submitbutn"> --> <button onclick="DisplayDate()">Submit</button>
+	<br>
+
+	<p>Please enter today's date : <input type="date" id="dateinp"  value="2000-01-01"> <button onclick="DisplayDate()">Submit</button>
 	</p>
 
 	<p>According to you today's date is:  </p>
 	<p id="outdate"></p>
 
+	<p>To know more about author of this page, hover the below text :</p>
+
+	<button id="hovertxt" onmouseover="AuthorDetails()"> <b>Hover here for more </b></button>
+	<p id="authornote"></p>
+
+	To make the text below dissapear (If any problem occurs, just reload the page) <button id="mouseaway" onmouseout="AuthorDetails2()"> <b>Point Here</b></button>
+
+	<p id="authornote2">This is a note to demonstrate the feature of 'onmouseout' Event of HTML. </p>
+
+	<p>Please enter the number to be checked : <input type="number" id="numcheck"> <button onclick="checknum()">Submit</button></p>
+
+	<p id="checkres"></p>
+
+	<p>How many terms of fibonacci series do you want to print ( > 2): <input type="number" id="fibb"> <button onclick="printfibb()">Submit</button> </p>
+
+	<p id="message"></p>
+	
+	<p id="printfibbspace"></p>
+
+	<p>The 5th, 7th, 10th words from 1st para are : <button onclick="findword()">Click Here</button></p>
+
+	<p id="para1words"></p>
 	<br><br>
+
 	<script>
 
 		function average(a, b, c, d, e){
@@ -50,6 +86,103 @@
 			var pattern = "/JavaScript asad/i" ;
 			var result = str.match(pattern) ;  
 			console.log("result : ", result) ; 
+		}
+
+		function DisplayDate(){
+			var dt = document.getElementById("dateinp").value ;
+
+			console.log("today's date is : ", dt) ;
+
+			document.getElementById("outdate").innerHTML = dt;
+		}
+
+		function AuthorDetails(){
+			document.getElementById("authornote").innerHTML = "Hello there, This is a note to demonstrate the feature of 'onmouseover' Event of HTML." ;
+		}
+
+		function AuthorDetails2(){
+			document.getElementById("authornote2").innerHTML = "" ;
+		}
+
+		function loadingText(){
+			alert("This message is for exhibiting the 'onload' Event of HTML.") ;
+		}
+
+		function username(){
+			var nm = document.getElementById("name").value ;
+
+			document.getElementById("welcometxt").innerHTML = nm+" , please take a look at the following info about JavaScript and it's application.";
+			
+		}
+
+		function checknum(){
+			var n = document.getElementById("numcheck").value;
+			if (n < 0) {
+				document.getElementById("checkres").innerHTML = "The given number is less than 0" ;
+			}
+			else if(n == 0){
+				document.getElementById("checkres").innerHTML = "The given number is equal to 0" ;
+			}
+			else{
+				switch( true ){
+					
+					case ( n >= 10 && n <= 100 ):
+						document.getElementById("checkres").innerHTML = "The given number lies between 10 and 100." ;
+						break;
+
+					case ( n > 100 ):
+						document.getElementById("checkres").innerHTML = "The given number is greater than 100.";
+						break;
+
+					case ( n < 10 ):
+						document.getElementById("checkres").innerHTML = "The given number is lesser than 10.";
+						break;
+
+				}
+			}
+
+		}
+
+		function printfibb(){
+			var n = document.getElementById("fibb").value;
+			try{
+				if (n < 0 ) throw "Not positive" ;
+				if (n <= 2) throw "Already printed" ;
+			}
+
+			catch (err){
+				document.getElementById("message").innerHTML = " Message : Input is " + err;
+			}
+
+			finally {
+    			document.getElementById("fibb").value = "";
+  			}
+			
+			var fib = [];
+			fib[0] = 0;
+			fib[1] = 1;
+			var i = 2;
+			
+			while( i<=n ){
+				fib[i] = fib[i-1] + fib[i-2];
+				i++;
+			}
+
+			var fib_str = fib.toString();
+
+			document.getElementById("printfibbspace").innerHTML = fib_str ;
+
+		}
+
+		function findword(){
+			var x = document.getElementById("para1").textContent ;
+			// document.getElementById("para1words").innerHTML = x ;
+			var words = x.split(' ') ;
+			var word5 = words[4] ;
+			var word7 = words[6] ;
+			var word10 = words[9] ;
+			document.getElementById("para1words").innerHTML = word5 + ", " + word7 + ", " + word10 ;
+
 		}
 
 		var a=5;
@@ -79,20 +212,9 @@
 
 		console.log("The value of tan(45) is : ",Math.tan(45 * Math.PI/180)) ;
 
-		// var dt;
-		// document.getElementById("dateinp").value
-
-		// console.log("today's date is : ", dt);
 		document.getElementById("submitbutn").onclick = DisplayDate() ;
 
-		function DisplayDate(){
-			var dt = document.getElementById("dateinp").value ;
-
-			console.log("today's date is : ", dt) ;
-
-			document.getElementById("outdate").innerHTML = dt;
-		}
-
+		
 	</script>
 </body>
 </html>
