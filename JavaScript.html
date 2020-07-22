@@ -23,6 +23,17 @@
     			$("#hidepara1").toggle();
   			});
 		});
+
+		$(document).ready(function(){
+			$("#fadebutn").dblclick(function(){
+				if( $("#fadepara").css("display") === "none" ){
+					$("#fadepara").fadeIn();
+				}
+				else{
+					$("#fadepara").fadeOut();
+				}
+			});
+		});
 	</script>
 
 </head>
@@ -92,6 +103,9 @@
 
 	<p id="hidepara2">This is the paragraph to be toggled using CSS display property. To demonstrate it : </p>
 	<button id="hide2" onclick="disp_and_hide()">Toggle Para 2</button> 
+
+	<p id="fadepara">Double Click the button below to fade this paragraph in and out</p>
+	<button id="fadebutn">Double Click to Fade Out/ Fade In</button>
 	<br><br>
 
 	<script>
